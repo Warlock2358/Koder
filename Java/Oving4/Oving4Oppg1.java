@@ -131,8 +131,8 @@ public class Oving4Oppg1 {
                 System.out.println("Vennligst tast et tall mellom 1 og 3");
                 System.exit(0);
             }
-            in.close();
-        }
 
+        }
+        in.close();
     }
 }
