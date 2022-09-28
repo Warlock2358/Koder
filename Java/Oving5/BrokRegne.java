@@ -2,7 +2,7 @@ package Java.Oving5;
 
 public class BrokRegne {
     private double teller, nevner;
-    private static double resTeller, resNever;
+    private double resTeller, resNever;
     private String resOutput, resTotal;
 
     public BrokRegne(double teller, double nevner) {
