@@ -11,6 +11,7 @@ public class Oppgave2 {
             int a = in.nextInt();
             if (a == 1) {
                 start();
+                in.close();
             } else if (a == 2) {
                 System.out.println("Programmet avsluttes");
                 System.exit(1);
@@ -18,6 +19,7 @@ public class Oppgave2 {
                 System.out.println("Ugyldig input");
             }
         }
+
     }
 
     public static void start() {
@@ -26,6 +28,7 @@ public class Oppgave2 {
         String input = in.nextLine();
         Tekstanalyse tekstanalyse = new Tekstanalyse(input);
         analyser(tekstanalyse);
+        in.close();
     }
 
     public static void analyser(Tekstanalyse tekstanalyse) {

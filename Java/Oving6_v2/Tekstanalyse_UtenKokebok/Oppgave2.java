@@ -14,6 +14,7 @@ public class Oppgave2 {
 
             if (valg == 1) {
                 start();
+                in.close();
             } else if (valg == 2) {
                 System.out.println("Programmet avsluttes");
                 System.exit(1);
@@ -29,5 +30,6 @@ public class Oppgave2 {
         String input = in.nextLine();
 
         Tekstanalyse tekstanalyse = new Tekstanalyse(input);
+        in.close();
     }
 }

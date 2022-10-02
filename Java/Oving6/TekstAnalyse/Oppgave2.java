@@ -17,6 +17,7 @@ public class Oppgave2 {
         String input = in.nextLine();
         TekstAnalyse tekstanalyse = new TekstAnalyse(input);
         analyser(tekstanalyse);
+        in.close();
     }
 
     public static void analyser(TekstAnalyse tekstanalyse) {

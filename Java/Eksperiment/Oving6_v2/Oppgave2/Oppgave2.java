@@ -17,11 +17,12 @@ class Oppgave2 {
         String input = in.nextLine();
         Tekstanalyse tekstanalyse = new Tekstanalyse(input);
         analyser(tekstanalyse);
+        in.close();
     }
 
     public static void analyser(Tekstanalyse tekstanalyse) {
         System.out.println("Antall forskjellige bokstaver: " + tekstanalyse.getAntallForskjellige());
-        System.out.println("Antall bokstaver: " + tekstanalyse.getAntallBokstaver());
+        System.out.println("Antall bokstaver: " + Tekstanalyse.getAntallBokstaver());
         System.out.println("Prosentandel som ikke er bokstaver: " + Tekstanalyse.getProsentIkkeBokstaver() + "%");
         System.out.println(Tekstanalyse.getFlestForekomster());
 
