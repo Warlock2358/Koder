@@ -47,7 +47,7 @@ public class Tekstanalyse {
     // and counts the number of elements that are greater than zero.
     // 2. The method `getAntallForskjellige` returns the number of elements that are
     // greater than zero.
-    public static int getAntallForskjellige() {
+    public int getAntallForskjellige() {
         int sum = 0;
         for (int i = 0; i < 29; i++) {
             if (antallTegn[i] > 0) {
@@ -62,7 +62,7 @@ public class Tekstanalyse {
     // 2. The method `getAntallBokstaver()` is called from the main method.
     // 3. The main method prints the sum of all the elements in the array
     // `antallTegn`.
-    public static int getAntallBokstaver() {
+    public int getAntallBokstaver() {
         int sum = 0;
         for (int i = 0; i < 29; i++) {
             sum = antallTegn[i] + sum;
@@ -70,7 +70,7 @@ public class Tekstanalyse {
         return sum;
     }
 
-    public static double getAntallIkkeBokstaver() {
+    public double getAntallIkkeBokstaver() {
         int antallBokstaver = getAntallBokstaver();
         int antallIkke = antallTegn[29];
 
@@ -89,7 +89,7 @@ public class Tekstanalyse {
         return sum;
     }
 
-    public static String getFlestForekomster() {
+    public String getFlestForekomster() {
         int hoyest = -1;
         String hoyestBokstav = "";
         for (int i = 0; i < 29; i++) {
@@ -101,5 +101,9 @@ public class Tekstanalyse {
             }
         }
         return "Bokstaven(e) som forekommer oftest er \"" + hoyestBokstav + "\" (" + hoyest + " ganger)";
+    }
+
+    public String getProsentIkkeBokstaver() {
+        return null;
     }
 }

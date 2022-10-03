@@ -32,9 +32,9 @@ public class Oppgave2 {
     }
 
     public static void analyser(Tekstanalyse tekstanalyse) {
-        System.out.println("Antall forskjellige bokstaver: " + Tekstanalyse.getAntallForskjellige());
-        System.out.println("Antall bokstaver: " + Tekstanalyse.getAntallBokstaver());
-        System.out.println("Prosentandel som ikke er bokstaver: " + Tekstanalyse.getAntallIkkeBokstaver() + "%");
-        System.out.println(Tekstanalyse.getFlestForekomster());
+        System.out.println("Antall forskjellige bokstaver: " + tekstanalyse.getAntallForskjellige());
+        System.out.println("Antall bokstaver: " + tekstanalyse.getAntallBokstaver());
+        System.out.println("Prosentandel som ikke er bokstaver: " + tekstanalyse.getAntallIkkeBokstaver() + "%");
+        System.out.println(tekstanalyse.getFlestForekomster());
     }
 }
