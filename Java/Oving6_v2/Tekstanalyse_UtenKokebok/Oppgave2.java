@@ -14,7 +14,6 @@ public class Oppgave2 {
 
             if (valg == 1) {
                 start();
-                in.close();
             } else if (valg == 2) {
                 System.out.println("Programmet avsluttes");
                 System.exit(1);
@@ -30,6 +29,16 @@ public class Oppgave2 {
         String input = in.nextLine();
 
         Tekstanalyse tekstanalyse = new Tekstanalyse(input);
-        in.close();
+        analyser(tekstanalyse);
+    }
+
+    public static void analyser(Tekstanalyse tekstanalyse) {
+        System.out.println("Antall forskjellige bokstaver: " + tekstanalyse.getAntallForskjellige());
+        System.out.println("Antall bokstaver: " + tekstanalyse.getAntallBokstaver());
+        System.out.println("Prosentandel som ikke er bokstaver: " + tekstanalyse.getProsentIkkeBokstaver() + "%");
+        System.out.println(tekstanalyse.getFlestForekomster());
+
+        // Hent antall forekomster av en spesifikk bokstav:
+        // System.out.println(tekstanalyse.getAntallSpesifikkBokstav("o"));
     }
 }
