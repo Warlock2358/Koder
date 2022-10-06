@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "alphabotsec.vscode-eclipse-keybindings",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "k--kato.intellij-idea-keybindings",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter-keymap"
+    ]
+}
