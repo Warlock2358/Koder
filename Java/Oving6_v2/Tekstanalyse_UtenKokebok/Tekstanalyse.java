@@ -44,9 +44,9 @@ public class Tekstanalyse {
         return unikbokstav;
     }
 
-    public int getAntallTegn() {
+    public static int getAntallTegn() {
         int sum = 0;
-        for (int i = 0; i < antallTegn.length; i++) {
+        for (int i = 0; i < 29; i++) {
             sum = antallTegn[i] + sum;
         }
         return sum;
@@ -54,9 +54,10 @@ public class Tekstanalyse {
 
     public double getProsentIkkeBokstaver() {
         int antallBokstaver = getAntallTegn();
-        int antallIkkeBokstaver = antallTegn[29];
-        double totalt = antallBokstaver + antallIkkeBokstaver;
-        double prosent = (antallIkkeBokstaver / totalt) * 100;
+        int antallAndre = antallTegn[29];
+        double totalt = antallBokstaver + antallAndre;
+        double prosent = (antallAndre / totalt) * 100;
+        // Rund av
         prosent = Math.round(prosent * 100.0) / 100.0;
         return prosent;
     }
@@ -78,7 +79,7 @@ public class Tekstanalyse {
                 max = antallTegn[i];
                 hoyestBokstav = bokstaver[i];
             } else if (antallTegn[i] == max) {
-                hoyestBokstav = hoyestBokstav + ", " + bokstaver[i];
+                hoyestBokstav = hoyestBokstav + ", ";
             }
         }
         return "Bokstaven(e) " + hoyestBokstav + " forekommer flest ganger med " + max + " forekomster.";

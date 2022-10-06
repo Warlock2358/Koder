@@ -102,8 +102,4 @@ public class Tekstanalyse {
         }
         return "Bokstaven(e) som forekommer oftest er \"" + hoyestBokstav + "\" (" + hoyest + " ganger)";
     }
-
-    public String getProsentIkkeBokstaver() {
-        return null;
-    }
 }

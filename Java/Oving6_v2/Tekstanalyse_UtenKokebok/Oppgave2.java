@@ -5,10 +5,10 @@ import java.util.*;
 import Java.Oving6_v2.Tekstanalyse.Tekstanalyse;
 
 public class Oppgave2 {
+    public static Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
-        int k = 1;
-        while (k == 1) {
-            Scanner in = new Scanner(System.in);
+        while (true) {
             System.out.println("Tast 1 for å analysere teksten, tast 2 for å avslutte");
             int valg = in.nextInt();
 
@@ -16,16 +16,19 @@ public class Oppgave2 {
                 start();
             } else if (valg == 2) {
                 System.out.println("Programmet avsluttes");
-                System.exit(1);
+                break;
             } else {
                 System.out.println("Ugyldig valg, prøv igjen");
             }
+
         }
+        in.close();
+        System.exit(1);
     }
 
     public static void start() {
-        Scanner in = new Scanner(System.in);
         System.out.println("Skriv inn en tekst");
+        in.nextLine();
         String input = in.nextLine();
 
         Tekstanalyse tekstanalyse = new Tekstanalyse(input);
@@ -35,7 +38,7 @@ public class Oppgave2 {
     public static void analyser(Tekstanalyse tekstanalyse) {
         System.out.println("Antall forskjellige bokstaver: " + tekstanalyse.getAntallForskjellige());
         System.out.println("Antall bokstaver: " + tekstanalyse.getAntallBokstaver());
-        System.out.println("Prosentandel som ikke er bokstaver: " + tekstanalyse.getProsentIkkeBokstaver() + "%");
+        System.out.println("Prosentandel som ikke er bokstaver: " + tekstanalyse.getAntallIkkeBokstaver() + "%");
         System.out.println(tekstanalyse.getFlestForekomster());
 
         // Hent antall forekomster av en spesifikk bokstav:
